@@ -13,6 +13,10 @@ html {
   font: normal 100%/1.3 "Noto Sans", sans-serif;
 }
 
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
 }
@@ -26,4 +30,88 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0 auto;
+  max-width: 45em;
+}
+
+.img-flex {
+  display: block;
+  width: 100%;
+}
+
+.section-letter {
+  width: 50%;
+}
+
+.section-icon {
+  width: 50%;
+}
+
+section h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+section p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 25em) {
+
+  .wrapper {
+    justify-content: space-around;
+  }
+
+  .section-letter, .section-icon {
+    width: 40%;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  .wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .section-letter {
+    order: 1;
+    width: 15%;
+  }
+
+  .section-body {
+    order: 2;
+    width: 60%;
+  }
+
+  .section-icon {
+    order: 3;
+    width: 15%;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  .section-letter, .section-icon {
+    width: 15%;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
+
 }
